@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teacher Portal</title>
+    <meta
+      name="description"
+      content="P.C  Quality Education Platform for Sierra Leone"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/logo.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader">
+      <div class="loader-inner">
+        <img src="images/logo.svg" alt="Loading" />
+        <span class="loader-bar"><i></i></span>
+        <p>Loading Quality Education…</p>
+      </div>
+    </div>
+    <div class="topbar">
+      <div class="wrap">
+        <span>Sierra Leone · Free Quality Education</span
+        ><span class="badge">P.C Platform</span>
+      </div>
+    </div>
+    <header class="header">
+      <div class="wrap nav">
+        <a class="brand" href="index.html"
+          ><img
+            src="images/logo.svg"
+            alt="P.C Quality Education Sierra Leone badge logo"
+          /><span
+            ><b>P.C  Quality Education</b
+            ><small>Quality Education Platform for Sierra Leone</small></span
+          ></a
+        >
+        <ul class="menu">
+          <li><a class="" href="index.html">Home</a></li>
+          <li><a class="" href="about.html">About</a></li>
+          <li><a class="" href="courses.html">Courses</a></li>
+          <li><a class="" href="schools.html">Schools</a></li>
+          <li><a class="" href="resources.html">Resources</a></li>
+          <li><a class="" href="ai-tutor.html">AI Tutor</a></li>
+          <li><a class="" href="scholarships.html">Scholarships</a></li>
+          <li><a class="" href="careers.html">Careers</a></li>
+          <li><a class="active" href="teacher-portal.html">Teacher</a></li>
+          <li><a class="" href="student-dashboard.html">Student</a></li>
+          <li><a class="" href="parent-portal.html">Parent</a></li>
+          <li><a class="" href="admin.html">Admin</a></li>
+          <li><a class="" href="security.html">Security</a></li>
+          <li><a class="" href="contact.html">Contact</a></li>
+          <li><a class="" href="login.html">Login</a></li>
+          <li><a class="" href="signup.html">Sign Up</a></li>
+        </ul>
+        <div class="actions">
+          <button class="icon theme" title="Dark or light mode">🌙</button
+          ><button class="icon hamb">☰</button>
+        </div>
+      </div>
+    </header>
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="crumb"><a href="index.html">Home</a> / Teacher Portal</div>
+        <h1 class="h1">Teacher Portal</h1>
+        <p class="lead">
+          Teachers create lessons, upload resources, mark assignments, track
+          attendance and monitor student performance.
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="role-header panel">
+          <div>
+            <span class="tag">Teacher Role</span>
+            <h2>Teacher Control Workspace</h2>
+            <p>
+              Role protected with two-step verification. Manage classes and
+              support learners across Sierra Leone.
+            </p>
+          </div>
+          <div class="btns">
+            <button
+              class="btn primary teacherAction"
+              data-msg="New lesson upload form opened."
+            >
+              Upload Lesson</button
+            ><button
+              class="btn outline teacherAction"
+              data-msg="Quiz builder opened."
+            >
+              Create Quiz
+            </button>
+          </div>
+        </div>
+        <div class="stats role-stats">
+          <div class="card stat"><b>128</b><span>Students</span></div>
+          <div class="card stat"><b>6</b><span>Classes</span></div>
+          <div class="card stat">
+            <b>24</b><span>Assignments submitted</span>
+          </div>
+          <div class="card stat"><b>91%</b><span>Attendance</span></div>
+        </div>
+        <div class="grid cols-3">
+          <div class="panel">
+            <h3>Lesson Management</h3>
+            <p>Upload notes, video lessons and low-data PDFs.</p>
+            <button
+              class="btn primary teacherAction"
+              data-msg="Integrated Science lesson published."
+            >
+              Publish Lesson
+            </button>
+          </div>
+          <div class="panel">
+            <h3>Quiz & Assessment</h3>
+            <p>Create BECE/WASSCE practice quizzes with instant feedback.</p>
+            <button
+              class="btn gold teacherAction"
+              data-msg="Mathematics quiz created successfully."
+            >
+              Create Assessment
+            </button>
+          </div>
+          <div class="panel">
+            <h3>Mark Assignments</h3>
+            <p>Review submitted work and provide feedback.</p>
+            <button
+              class="btn outline teacherAction"
+              data-msg="Assignments marked and feedback sent."
+            >
+              Mark Work
+            </button>
+          </div>
+        </div>
+        <div class="grid cols-2" style="margin-top: 1.3rem">
+          <div class="panel">
+            <h3>Class Performance</h3>
+            <div class="subject-row">
+              <span>JSS 3 Mathematics</span><b>76%</b>
+            </div>
+            <div class="progress"><span style="width: 76%"></span></div>
+            <div class="subject-row"><span>SSS 1 English</span><b>69%</b></div>
+            <div class="progress"><span style="width: 69%"></span></div>
+            <div class="subject-row">
+              <span>BECE Science Prep</span><b>81%</b>
+            </div>
+            <div class="progress"><span style="width: 81%"></span></div>
+          </div>
+          <div class="panel">
+            <h3>Teacher Activity Console</h3>
+            <div id="teacherConsole" class="success">
+              Waiting for teacher action...
+            </div>
+            <h3 style="margin-top: 1rem">Recent Actions</h3>
+            <div class="activity">
+              <b>Uploaded English Essay Guide</b><span>Today</span>
+            </div>
+            <div class="activity">
+              <b>Marked 18 Mathematics assignments</b><span>Yesterday</span>
+            </div>
+            <div class="activity">
+              <b>Sent notice to parents</b><span>2 days ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="wrap foot">
+        <div>
+          <a class="brand" href="index.html"
+            ><img src="images/logo.svg" alt="badge" /><span
+              ><b>P.C Quality Education</b
+              ><small>Sierra Leone</small></span
+            ></a
+          >
+          <p>
+            Free, inclusive, secure and mobile-friendly education support for
+            learners, teachers and parents in Sierra Leone.
+          </p>
+        </div>
+        <div>
+          <h3>Platform</h3>
+          <a href="courses.html">Courses</a><a href="resources.html">Library</a
+          ><a href="schools.html">School Locator</a
+          ><a href="ai-tutor.html">AI Tutor</a>
+        </div>
+        <div>
+          <h3>Portals</h3>
+          <a href="student-dashboard.html">Student</a
+          ><a href="teacher-portal.html">Teacher</a
+          ><a href="parent-portal.html">Parent</a><a href="admin.html">Admin</a>
+        </div>
+        <div>
+          <h3>Updates</h3>
+          <form id="newsletter">
+            <input type="email" placeholder="Email address" /><button
+              class="btn gold"
+              style="margin-top: 0.6rem"
+            >
+              Join
+            </button>
+          </form>
+          <small id="nlmsg"></small>
+        </div>
+      </div>
+      <div class="wrap bottom">
+        <span
+          >© <span id="year"></span> P.C Quality Education Platform for
+          Sierra Leone</span
+        ><span>FREE LEARNING FOR ALL</span>
+      </div>
+    </footer>
+    <button class="back">↑</button>
+    <script src="js/main.js"></script>
+      <script src="js/sqlite-backend.js"></script>
+  </body>
+</html>

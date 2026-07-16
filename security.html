@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Security & Privacy</title>
+    <meta
+      name="description"
+      content="P.C Security & Privacy -  quality education platform for Sierra Leone"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/logo.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader">
+      <div class="loader-inner">
+        <img src="images/logo.svg" alt="Loading" />
+        <span class="loader-bar"><i></i></span>
+        <p>Loading Quality Education…</p>
+      </div>
+    </div>
+    <div class="topbar">
+      <div class="wrap">
+        <span>Sierra Leone · Free Quality Education</span
+        ><span class="badge">P.C Platform</span>
+      </div>
+    </div>
+    <header class="header">
+      <div class="wrap nav">
+        <a class="brand" href="index.html"
+          ><img
+            src="images/logo.svg"
+            alt="P.C Quality Education Sierra Leone badge logo"
+          /><span
+            ><b>P.C Quality Education</b
+            ><small>Quality Education Platform for Sierra Leone</small></span
+          ></a
+        >
+        <ul class="menu">
+          <li><a class="" href="index.html">Home</a></li>
+          <li><a class="" href="about.html">About</a></li>
+          <li><a class="" href="courses.html">Courses</a></li>
+          <li><a class="" href="schools.html">Schools</a></li>
+          <li><a class="" href="resources.html">Resources</a></li>
+          <li><a class="" href="ai-tutor.html">AI Tutor</a></li>
+          <li><a class="" href="scholarships.html">Scholarships</a></li>
+          <li><a class="" href="careers.html">Careers</a></li>
+          <li><a class="" href="teacher-portal.html">Teacher</a></li>
+          <li><a class="" href="student-dashboard.html">Student</a></li>
+          <li><a class="" href="parent-portal.html">Parent</a></li>
+          <li><a class="" href="admin.html">Admin</a></li>
+          <li><a class="active" href="security.html">Security</a></li>
+          <li><a class="" href="contact.html">Contact</a></li>
+          <li><a class="" href="login.html">Login</a></li>
+          <li><a class="" href="signup.html">Sign Up</a></li>
+        </ul>
+        <div class="actions">
+          <button class="icon theme" title="Dark or light mode">🌙</button
+          ><button class="icon hamb">☰</button>
+        </div>
+      </div>
+    </header>
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="crumb">
+          <a href="index.html">Home</a> / Security & Privacy
+        </div>
+        <h1 class="h1">Security & Privacy</h1>
+        <p class="lead">
+          P.C Quality Education Platform for Sierra Leone protects
+          learners with safe access, role-based dashboards and two-step
+          verification for teachers and admins.
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap grid cols-3">
+        <div class="card">
+          <div class="ico">🔐</div>
+          <h3>Secure Login</h3>
+          <p>
+            Password fields, show/hide control, validation and protected role
+            routing.
+          </p>
+        </div>
+        <div class="card">
+          <div class="ico">📲</div>
+          <h3>Two-Step Verification</h3>
+          <p>
+            Required for teacher and admin accounts before they can upload
+            content or control the system.
+          </p>
+        </div>
+        <div class="card">
+          <div class="ico">🛡️</div>
+          <h3>Role-Based Access</h3>
+          <p>
+            Students, parents, teachers and admins each see the tools meant for
+            their role.
+          </p>
+        </div>
+        <div class="card">
+          <div class="ico">👶</div>
+          <h3>Child-Safe Platform</h3>
+          <p>Moderation controls, abuse reporting and safe learning rules.</p>
+        </div>
+        <div class="card">
+          <div class="ico">📄</div>
+          <h3>Data Privacy</h3>
+          <p>
+            Only necessary information is requested. A real version would store
+            passwords with hashing on a secure server.
+          </p>
+        </div>
+        <div class="card">
+          <div class="ico">📊</div>
+          <h3>Security Logs</h3>
+          <p>
+            Admin can review failed logins, account approvals and platform
+            changes.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="section alt">
+      <div class="wrap grid cols-2">
+        <div class="panel">
+          <h2 class="h2">Frontend Demo Security Check</h2>
+          <p style="color: var(--muted); margin-bottom: 1rem">
+            This checks basic password strength and explains the security level.
+            It is a project demo, not a real server scan.
+          </p>
+          <div class="field">
+            <label>Test password</label
+            ><input
+              id="securityPassword"
+              type="password"
+              placeholder="Try a strong password"
+            />
+          </div>
+          <button id="riskCheck" class="btn primary">Run security check</button>
+          <div id="riskResult" class="success hidden"></div>
+        </div>
+        <div class="panel">
+          <h2 class="h2">User Rights</h2>
+          <ul style="margin-left: 1.2rem; color: var(--muted)">
+            <li>View and edit profile information.</li>
+            <li>Request account deletion.</li>
+            <li>Report unsafe content or abuse.</li>
+            <li>Use large text and dark/light mode for accessibility.</li>
+            <li>Know what information the platform collects.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="wrap foot">
+        <div>
+          <a class="brand" href="index.html"
+            ><img src="images/logo.svg" alt="badge" /><span
+              ><b>P.C Quality Education</b
+              ><small>Sierra Leone</small></span
+            ></a
+          >
+          <p>
+            Free, inclusive, secure and mobile-friendly education support for
+            learners, teachers and parents in Sierra Leone.
+          </p>
+        </div>
+        <div>
+          <h3>Platform</h3>
+          <a href="courses.html">Courses</a><a href="resources.html">Library</a
+          ><a href="schools.html">School Locator</a
+          ><a href="ai-tutor.html">AI Tutor</a>
+        </div>
+        <div>
+          <h3>Portals</h3>
+          <a href="student-dashboard.html">Student</a
+          ><a href="teacher-portal.html">Teacher</a
+          ><a href="parent-portal.html">Parent</a><a href="admin.html">Admin</a>
+        </div>
+        <div>
+          <h3>Updates</h3>
+          <form id="newsletter">
+            <input type="email" placeholder="Email address" /><button
+              class="btn gold"
+              style="margin-top: 0.6rem"
+            >
+              Join
+            </button>
+          </form>
+          <small id="nlmsg"></small>
+        </div>
+      </div>
+      <div class="wrap bottom">
+        <span
+          >© <span id="year"></span> P.C Quality Education Platform for
+          Sierra Leone</span
+        ><span>FREE LEARNING FOR ALL</span>
+      </div>
+    </footer>
+    <button class="back">↑</button>
+    <script src="js/main.js"></script>
+      <script src="js/sqlite-backend.js"></script>
+  </body>
+</html>

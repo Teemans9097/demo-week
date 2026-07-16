@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <meta
+      name="description"
+      content="P.C  Quality Education Platform for Sierra Leone -  quality education platform for Sierra Leone"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/logo.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader">
+      <div class="loader-inner">
+        <img src="images/logo.svg" alt="Loading" />
+        <span class="loader-bar"><i></i></span>
+        <p>Loading Quality Education…</p>
+      </div>
+    </div>
+    <div class="topbar">
+      <div class="wrap">
+        <span> Sierra Leone · Free Quality Education</span
+        ><span class="badge">P.C Platform</span>
+      </div>
+    </div>
+    <header class="header">
+      <div class="wrap nav">
+        <a class="brand" href="index.html"
+          ><img
+            src="images/logo.svg"
+            alt="P.C Quality Education Sierra Leone badge logo"
+          /><span
+            ><b>P.C Quality Education</b
+            ><small>Quality Education Platform for Sierra Leone</small></span
+          ></a
+        >
+        <ul class="menu">
+          <li><a class="" href="index.html">Home</a></li>
+          <li><a class="" href="about.html">About</a></li>
+          <li><a class="" href="courses.html">Courses</a></li>
+          <li><a class="" href="schools.html">Schools</a></li>
+          <li><a class="" href="resources.html">Resources</a></li>
+          <li><a class="" href="ai-tutor.html">AI Tutor</a></li>
+          <li><a class="" href="scholarships.html">Scholarships</a></li>
+          <li><a class="" href="careers.html">Careers</a></li>
+          <li><a class="" href="teacher-portal.html">Teacher</a></li>
+          <li><a class="" href="student-dashboard.html">Student</a></li>
+          <li><a class="" href="parent-portal.html">Parent</a></li>
+          <li><a class="" href="admin.html">Admin</a></li>
+          <li><a class="" href="security.html">Security</a></li>
+          <li><a class="" href="contact.html">Contact</a></li>
+          <li><a class="active" href="login.html">Login</a></li>
+          <li><a class="" href="signup.html">Sign Up</a></li>
+        </ul>
+        <div class="actions">
+          <button class="icon theme" title="Dark or light mode">🌙</button
+          ><button class="icon hamb">☰</button>
+        </div>
+      </div>
+    </header>
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="crumb"><a href="index.html">Home</a> / Login</div>
+        <h1 class="h1">Secure Login</h1>
+        <p class="lead">
+          Students login quickly. Teachers and admins complete two-step
+          verification for stronger platform security.
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap grid cols-2" style="align-items: start">
+        <div class="panel">
+          <span class="tag">Authentication</span>
+          <h2 class="h2">Access your account</h2>
+          <form id="loginForm">
+            <div class="field">
+              <label>Email or Student ID</label
+              ><input
+                id="loginEmail"
+                type="text"
+                placeholder="student ID or email"
+                required
+              />
+            </div>
+            <div class="field">
+              <label>Password</label
+              ><input
+                id="loginPass"
+                type="password"
+                placeholder="Enter password"
+                required
+              /><button
+                type="button"
+                class="chip showpass"
+                data-target="#loginPass"
+              >
+                Show password
+              </button>
+            </div>
+            <div class="field">
+              <label>Role</label
+              ><select id="loginRole" required>
+                <option value="">Select role</option>
+                <option value="Student">Student</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Parent">Parent</option>
+                <option value="Admin">Admin</option>
+              </select>
+            </div>
+            <label
+              style="
+                display: flex;
+                gap: 0.6rem;
+                align-items: center;
+                margin-bottom: 1rem;
+              "
+              ><input type="checkbox" style="width: auto" /> Remember me on this
+              device</label
+            >
+            <div style="margin-bottom: 1rem">
+              <a
+                href="forgot-password.html"
+                style="color: var(--blue); font-weight: 800"
+                >Forgot password?</a
+              >
+            </div>
+            <button class="btn primary">Login</button
+            ><a href="signup.html" class="btn outline">Create account</a>
+          </form>
+          <p style="margin-top: 1rem; color: var(--muted)">
+            New accounts confirm identity with our
+            <a href="verify-id.html" style="color: var(--green); font-weight: 800"
+              >AI National ID check</a
+            >.
+          </p>
+        </div>
+        <div class="panel">
+          <span class="tag">Two-Step Security</span>
+          <h2 class="h2">Teacher and admin protection</h2>
+          <p>
+            For this frontend demo, teacher and admin accounts are sent to a
+            two-step verification page. Use the demo code below during
+            presentation.
+          </p>
+          <div class="card" style="margin-top: 1rem">
+            <h3>Demo verification code</h3>
+            <p style="font-size: 2rem; font-weight: 900; color: var(--green)">
+              246810
+            </p>
+            <p>
+              In a real system, this code would be sent by SMS, email or
+              authenticator app.
+            </p>
+          </div>
+          <ul style="margin: 1rem 0 0 1.2rem; color: var(--muted)">
+            <li>Students and parents: normal login.</li>
+            <li>Teachers: protected upload and class tools.</li>
+            <li>Admins: protected control of the whole platform.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="wrap foot">
+        <div>
+          <a class="brand" href="index.html"
+            ><img src="images/logo.svg" alt="badge" /><span
+              ><b>P.C SDG 4 Quality Education</b
+              ><small>Sierra Leone</small></span
+            ></a
+          >
+          <p>
+            Free, inclusive, secure and mobile-friendly education support for
+            learners, teachers and parents in Sierra Leone.
+          </p>
+        </div>
+        <div>
+          <h3>Platform</h3>
+          <a href="courses.html">Courses</a><a href="resources.html">Library</a
+          ><a href="schools.html">School Locator</a
+          ><a href="ai-tutor.html">AI Tutor</a>
+        </div>
+        <div>
+          <h3>Portals</h3>
+          <a href="student-dashboard.html">Student</a
+          ><a href="teacher-portal.html">Teacher</a
+          ><a href="parent-portal.html">Parent</a><a href="admin.html">Admin</a>
+        </div>
+        <div>
+          <h3>Updates</h3>
+          <form id="newsletter">
+            <input type="email" placeholder="Email address" /><button
+              class="btn gold"
+              style="margin-top: 0.6rem"
+            >
+              Join
+            </button>
+          </form>
+          <small id="nlmsg"></small>
+        </div>
+      </div>
+      <div class="wrap bottom">
+        <span
+          >© <span id="year"></span> P.C Quality Education Platform for
+          Sierra Leone</span
+        ><span>FREE LEARNING FOR ALL</span>
+      </div>
+    </footer>
+    <button class="back">↑</button>
+    <script src="js/main.js"></script>
+      <script src="js/sqlite-backend.js"></script>
+  </body>
+</html>

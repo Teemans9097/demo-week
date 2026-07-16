@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <meta
+      name="description"
+      content="P.C Quality Education Platform for Sierra Leone"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/logo.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader">
+      <div class="loader-inner">
+        <img src="images/logo.svg" alt="Loading" />
+        <span class="loader-bar"><i></i></span>
+        <p>Loading Quality Education…</p>
+      </div>
+    </div>
+    <div class="topbar">
+      <div class="wrap">
+        <span>Sierra Leone · Free Quality Education</span
+        ><span class="badge">P.C Platform</span>
+      </div>
+    </div>
+    <header class="header">
+      <div class="wrap nav">
+        <a class="brand" href="index.html"
+          ><img
+            src="images/logo.svg"
+            alt="P.C Quality Education Sierra Leone badge logo"
+          /><span
+            ><b>P.C Quality Education</b
+            ><small>Quality Education Platform for Sierra Leone</small></span
+          ></a
+        >
+        <ul class="menu">
+          <li><a class="" href="index.html">Home</a></li>
+          <li><a class="" href="about.html">About</a></li>
+          <li><a class="" href="courses.html">Courses</a></li>
+          <li><a class="" href="schools.html">Schools</a></li>
+          <li><a class="" href="resources.html">Resources</a></li>
+          <li><a class="" href="ai-tutor.html">AI Tutor</a></li>
+          <li><a class="" href="scholarships.html">Scholarships</a></li>
+          <li><a class="" href="careers.html">Careers</a></li>
+          <li><a class="" href="teacher-portal.html">Teacher</a></li>
+          <li><a class="active" href="student-dashboard.html">Student</a></li>
+          <li><a class="" href="parent-portal.html">Parent</a></li>
+          <li><a class="" href="admin.html">Admin</a></li>
+          <li><a class="" href="security.html">Security</a></li>
+          <li><a class="" href="contact.html">Contact</a></li>
+          <li><a class="" href="login.html">Login</a></li>
+          <li><a class="" href="signup.html">Sign Up</a></li>
+        </ul>
+        <div class="actions">
+          <button class="icon theme" title="Dark or light mode">🌙</button
+          ><button class="icon hamb">☰</button>
+        </div>
+      </div>
+    </header>
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="crumb">
+          <a href="index.html">Home</a> / Student Dashboard
+        </div>
+        <h1 class="h1">Student Dashboard</h1>
+        <p class="lead">
+          A real learning workspace showing courses, activities, tasks, badges,
+          analytics and recommendations for Sierra Leone learners.
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        <div class="child-code-card">
+          <span class="tag">Parent linking</span>
+          <h3 style="margin: 0.3rem 0">Your parent access code</h3>
+          <p>
+            Share this code with your parent so they can follow your progress on
+            the Parent Portal.
+          </p>
+          <div class="code" id="childCodeShow">SLE-0000</div>
+        </div>
+        <div class="role-header panel">
+          <div>
+            <span class="tag">Student Role</span>
+            <h2>Welcome, <span class="userName">Student</span></h2>
+            <p>
+              Class: JSS 3 · District: Western Area · Continue learning:
+              <b class="lastCourse">BECE Preparation</b>
+            </p>
+          </div>
+          <div class="btns">
+            <a class="btn primary" href="courses.html">Continue Course</a
+            ><a class="btn outline" href="ai-tutor.html">Ask AI Tutor</a>
+          </div>
+        </div>
+        <div class="stats role-stats">
+          <div class="card stat">
+            <b>14h</b><span>Study time this week</span>
+          </div>
+          <div class="card stat"><b>7</b><span>Learning streak</span></div>
+          <div class="card stat"><b>82%</b><span>Average quiz score</span></div>
+          <div class="card stat"><b>4</b><span>Certificates earned</span></div>
+        </div>
+        <div class="grid cols-2 role-layout">
+          <div class="panel">
+            <h3>Learning Progress</h3>
+            <div class="subject-row"><span>Mathematics</span><b>80%</b></div>
+            <div class="progress"><span style="width: 80%"></span></div>
+            <div class="subject-row">
+              <span>English Language</span><b>65%</b>
+            </div>
+            <div class="progress"><span style="width: 65%"></span></div>
+            <div class="subject-row">
+              <span>Integrated Science</span><b>72%</b>
+            </div>
+            <div class="progress"><span style="width: 72%"></span></div>
+            <div class="subject-row"><span>ICT</span><b>90%</b></div>
+            <div class="progress"><span style="width: 90%"></span></div>
+          </div>
+          <div class="panel">
+            <h3>Recent Learning Activities</h3>
+            <div class="activity-list" id="studentActivities">
+              <div class="activity">
+                <b>Completed BECE Mathematics Quiz</b
+                ><span>Today · 9:30 AM · Score 82%</span>
+              </div>
+              <div class="activity">
+                <b>Watched English Essay Writing Lesson</b
+                ><span>Yesterday · 22 minutes</span>
+              </div>
+              <div class="activity">
+                <b>Downloaded WASSCE Physics Notes</b
+                ><span>2 days ago · Offline resource saved</span>
+              </div>
+              <div class="activity">
+                <b>Asked AI Tutor about photosynthesis</b
+                ><span>3 days ago · Science revision</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid cols-3" style="margin-top: 1.3rem">
+          <div class="panel">
+            <h3>My Courses</h3>
+            <div class="course-mini">
+              <b>BECE Mathematics</b
+              ><button
+                class="btn sm primary studentAction"
+                data-msg="Opening BECE Mathematics lesson..."
+              >
+                Continue
+              </button>
+            </div>
+            <div class="course-mini">
+              <b>English Essay Writing</b
+              ><button
+                class="btn sm outline studentAction"
+                data-msg="Opening English notes..."
+              >
+                View Notes
+              </button>
+            </div>
+            <div class="course-mini">
+              <b>Integrated Science</b
+              ><button
+                class="btn sm gold studentAction"
+                data-msg="Starting Science quiz..."
+              >
+                Take Quiz
+              </button>
+            </div>
+            <div id="studentConsole" class="success">
+              Ready for your next learning activity.
+            </div>
+          <div class="panel">
+            <h3>Upcoming Tasks</h3>
+            <div id="studentTaskList"></div>
+          </div>
+          <div class="panel">
+            <h3>Recommended Lessons</h3>
+            <div id="recommendedLessons"></div>
+          </div>
+          <div class="panel">
+            <h3>My Certificates</h3>
+            <div id="certificateList"></div>
+          </div>
+
+          </div>
+          <div class="panel">
+            <h3>Upcoming Tasks</h3>
+            <div class="task">
+              <b>BECE Mock Exam</b><span>20 June 2026</span>
+            </div>
+            <div class="task">
+              <b>English Assignment</b><span>22 June 2026</span>
+            </div>
+            <div class="task"><b>Science Quiz</b><span>25 June 2026</span></div>
+            <button
+              class="btn outline studentAction"
+              data-msg="Study plan created for this week."
+            >
+              Generate Study Plan
+            </button>
+          </div>
+          <div class="panel">
+            <h3>Badges & Certificates</h3>
+            <p>🏅 7-Day Streak</p>
+            <p>📘 BECE Starter</p>
+            <p>🎯 Quiz Champion</p>
+            <p>🏆 ICT Fundamentals Certificate</p>
+            <button
+              class="btn gold"
+              onclick="
+                alert('Demo certificate generated for P.C SDG 4 learner')
+              "
+            >
+              Download Certificate
+            </button>
+          </div>
+        </div>
+        <div class="grid cols-2" style="margin-top: 1.3rem">
+          <div class="panel">
+            <h3>Recommended Lessons</h3>
+            <p>
+              Based on weaker subjects: Algebra Basics, English Essay Structure,
+              Photosynthesis Revision.
+            </p>
+            <div class="btns">
+              <a class="btn primary" href="resources.html">Open Resources</a
+              ><a class="btn outline" href="tools.html">Practice Quiz</a>
+            </div>
+          </div>
+          <div class="panel">
+            <h3>Notifications</h3>
+            <p>🔔 New scholarship available for girls in STEM.</p>
+            <p>🔔 Teacher uploaded a new BECE revision lesson.</p>
+            <p>🔔 Mock exam starts tomorrow at 10:00 AM.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="wrap foot">
+        <div>
+          <a class="brand" href="index.html"
+            ><img src="images/logo.svg" alt="badge" /><span
+              ><b>P.C  Quality Education</b
+              ><small>Sierra Leone</small></span
+            ></a
+          >
+          <p>
+            Free, inclusive, secure and mobile-friendly education support for
+            learners, teachers and parents in Sierra Leone.
+          </p>
+        </div>
+        <div>
+          <h3>Platform</h3>
+          <a href="courses.html">Courses</a><a href="resources.html">Library</a
+          ><a href="schools.html">School Locator</a
+          ><a href="ai-tutor.html">AI Tutor</a>
+        </div>
+        <div>
+          <h3>Portals</h3>
+          <a href="student-dashboard.html">Student</a
+          ><a href="teacher-portal.html">Teacher</a
+          ><a href="parent-portal.html">Parent</a><a href="admin.html">Admin</a>
+        </div>
+        <div>
+          <h3>Updates</h3>
+          <form id="newsletter">
+            <input type="email" placeholder="Email address" /><button
+              class="btn gold"
+              style="margin-top: 0.6rem"
+            >
+              Join
+            </button>
+          </form>
+          <small id="nlmsg"></small>
+        </div>
+      </div>
+      <div class="wrap bottom">
+        <span
+          >© <span id="year"></span> P.C Quality Education Platform for
+          Sierra Leone</span
+        ><span>FREE LEARNING FOR ALL</span>
+      </div>
+    </footer>
+    <button class="back">↑</button>
+    <script src="js/main.js"></script>
+    <script src="js/sqlite-backend.js"></script>
+    <script>
+      (function () {
+        var el = document.getElementById("childCodeShow");
+        if (!el) return;
+        var code = localStorage.getItem("childCode");
+        if (!code) {
+          code = "SLE-" + Math.floor(1000 + Math.random() * 9000);
+          localStorage.setItem("childCode", code);
+        }
+        el.textContent = code;
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>National ID Verification</title>
+    <meta
+      name="description"
+      content="AI-assisted National ID verification for the P.C  Quality Education Platform for Sierra Leone (demonstration)."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/logo.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader">
+      <div class="loader-inner">
+        <img src="images/logo.svg" alt="Loading" />
+        <span class="loader-bar"><i></i></span>
+        <p>Loading Quality Education…</p>
+      </div>
+    </div>
+    <div class="topbar">
+      <div class="wrap">
+        <span>🇸🇱 Freetown, Sierra Leone · Free Quality Education</span
+        ><span class="badge">P.C Platform</span>
+      </div>
+    </div>
+    <header class="header">
+      <div class="wrap nav">
+        <a class="brand" href="index.html"
+          ><img
+            src="images/logo.svg"
+            alt="P.C Quality Education Sierra Leone badge logo"
+          /><span
+            ><b>P.C Quality Education</b
+            ><small>Quality Education Platform for Sierra Leone</small></span
+          ></a
+        >
+        <ul class="menu">
+          <li><a class="" href="index.html">Home</a></li>
+          <li><a class="" href="about.html">About</a></li>
+          <li><a class="" href="courses.html">Courses</a></li>
+          <li><a class="" href="schools.html">Schools</a></li>
+          <li><a class="" href="resources.html">Resources</a></li>
+          <li><a class="" href="ai-tutor.html">AI Tutor</a></li>
+          <li><a class="" href="scholarships.html">Scholarships</a></li>
+          <li><a class="" href="careers.html">Careers</a></li>
+          <li><a class="" href="teacher-portal.html">Teacher</a></li>
+          <li><a class="" href="student-dashboard.html">Student</a></li>
+          <li><a class="" href="parent-portal.html">Parent</a></li>
+          <li><a class="" href="admin.html">Admin</a></li>
+          <li><a class="" href="security.html">Security</a></li>
+          <li><a class="" href="contact.html">Contact</a></li>
+          <li><a class="" href="login.html">Login</a></li>
+          <li><a class="" href="signup.html">Sign Up</a></li>
+        </ul>
+        <div class="actions">
+          <button class="icon theme" title="Dark or light mode">🌙</button
+          ><button class="icon hamb">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="crumb"><a href="index.html">Home</a> / Verify National ID</div>
+        <h1 class="h1">AI National ID Verification</h1>
+        <p class="lead">
+          Confirm your identity with your Sierra Leone National Identification
+          Number (NIN). Our assistant reads the document, checks it against the
+          record format and runs a face and liveness check before your account
+          is activated.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap grid verify-grid">
+        <!-- Left: entry form -->
+        <div class="panel">
+          <span class="tag">Identity Check</span>
+          <h2 class="h2">Enter your ID details</h2>
+
+          <div class="demo-note">
+            Demonstration only. This page is not connected to NCRA systems. No
+            real identity data is verified, transmitted or stored.
+          </div>
+
+          <form id="verifyForm">
+            <div class="field">
+              <label>Full name (as on ID)</label>
+              <input id="vName" placeholder="e.g. Aminata Sesay Conteh" required />
+            </div>
+            <div class="field">
+              <label>National Identification Number (NIN)</label>
+              <input
+                id="vNin"
+                inputmode="numeric"
+                placeholder="9-digit NCRA number"
+                required
+              />
+              <small id="vNinHint" class="err" style="display: none"
+                >Enter a valid NIN (at least 8 digits).</small
+              >
+            </div>
+            <div class="grid cols-2">
+              <div class="field">
+                <label>Date of birth</label>
+                <input id="vDob" type="date" required />
+              </div>
+              <div class="field">
+                <label>ID type</label>
+                <select id="vType">
+                  <option>National ID Card</option>
+                  <option>Voter ID</option>
+                  <option>Student ID (school-issued)</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label>Upload ID image (optional in demo)</label>
+              <input id="vFile" type="file" accept="image/*" />
+            </div>
+            <button class="btn primary" id="vScanBtn">Verify with AI</button>
+          </form>
+        </div>
+
+        <!-- Right: live ID preview + AI progress -->
+        <div class="panel">
+          <span class="tag">Live Preview</span>
+          <h2 class="h2">Verification</h2>
+
+          <div class="id-card" id="idCard">
+            <span class="scan-line"></span>
+            <span class="id-flag">🇸🇱 REPUBLIC OF SIERRA LEONE</span>
+            <h3>National Identification</h3>
+            <div class="id-photo">👤</div>
+            <div class="id-field">Name</div>
+            <div class="id-value" id="pvName">— — —</div>
+            <div class="id-field" style="margin-top: 0.5rem">NIN</div>
+            <div class="id-value" id="pvNin">•••• •••• •</div>
+            <div class="id-field" style="margin-top: 0.5rem">Date of birth</div>
+            <div class="id-value" id="pvDob">— —</div>
+          </div>
+
+          <div class="verify-status" id="verifySteps">
+            <div class="verify-step" data-step="1">
+              <span class="dot">1</span> Reading document
+            </div>
+            <div class="verify-step" data-step="2">
+              <span class="dot">2</span> Matching NCRA record format
+            </div>
+            <div class="verify-step" data-step="3">
+              <span class="dot">3</span> Face match
+            </div>
+            <div class="verify-step" data-step="4">
+              <span class="dot">4</span> Liveness check
+            </div>
+          </div>
+
+          <div id="verifyResult" class="verify-result pass hidden"></div>
+          <div class="confidence hidden" id="confWrap"><i id="confBar"></i></div>
+          <div id="verifyActions" class="btns hidden">
+            <a class="btn primary" id="continueBtn" href="student-dashboard.html"
+              >Continue to my dashboard</a
+            ><button class="btn outline" id="retryBtn" type="button">
+              Verify again
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap foot">
+        <div>
+          <a class="brand" href="index.html"
+            ><img src="images/logo.svg" alt="badge" /><span
+              ><b>P.C SDG 4 Quality Education</b
+              ><small>Sierra Leone</small></span
+            ></a
+          >
+          <p>
+            Free, inclusive, secure and mobile-friendly education support for
+            learners, teachers and parents in Sierra Leone.
+          </p>
+        </div>
+        <div>
+          <h3>Platform</h3>
+          <a href="courses.html">Courses</a><a href="resources.html">Library</a
+          ><a href="schools.html">School Locator</a
+          ><a href="ai-tutor.html">AI Tutor</a>
+        </div>
+        <div>
+          <h3>Account</h3>
+          <a href="login.html">Login</a><a href="signup.html">Sign Up</a
+          ><a href="verify-id.html">Verify ID</a
+          ><a href="forgot-password.html">Reset password</a>
+        </div>
+        <div>
+          <h3>Updates</h3>
+          <form id="newsletter">
+            <input type="email" placeholder="Email address" /><button
+              class="btn gold"
+              style="margin-top: 0.6rem"
+            >
+              Join
+            </button>
+          </form>
+          <small id="nlmsg"></small>
+        </div>
+      </div>
+      <div class="wrap bottom">
+        <span
+          >© <span id="year"></span> P.C Quality Education Platform for
+          Sierra Leone</span
+        ><span>FREE LEARNING FOR ALL</span>
+      </div>
+    </footer>
+    <button class="back">↑</button>
+    <script src="js/main.js"></script>
+    <script src="js/sqlite-backend.js"></script>
+    <script>
+      // ---- AI National ID verification (client-side demonstration) ----
+      (function () {
+        const $ = (s) => document.querySelector(s);
+        const form = $("#verifyForm");
+        if (!form) return;
+
+        const idCard = $("#idCard");
+        const steps = [...document.querySelectorAll(".verify-step")];
+        const result = $("#verifyResult");
+        const confWrap = $("#confWrap");
+        const confBar = $("#confBar");
+        const actions = $("#verifyActions");
+        const continueBtn = $("#continueBtn");
+
+        // Route the "Continue" button to the right place for the signed-up role.
+        const role = localStorage.getItem("pcRole") || "Student";
+        const dest =
+          role === "Admin" || role === "Teacher"
+            ? "two-step.html"
+            : role === "Parent"
+              ? "parent-portal.html"
+              : "student-dashboard.html";
+        continueBtn.setAttribute("href", dest);
+
+        function maskNin(n) {
+          const s = (n || "").replace(/\s+/g, "");
+          if (!s) return "•••• •••• •";
+          return s.replace(/.(?=.{4})/g, "•").replace(/(.{4})(?=.)/g, "$1 ");
+        }
+
+        // Live preview as the user types
+        $("#vName").addEventListener("input", (e) => {
+          $("#pvName").textContent = e.target.value.trim() || "— — —";
+        });
+        $("#vNin").addEventListener("input", (e) => {
+          $("#pvNin").textContent = maskNin(e.target.value);
+        });
+        $("#vDob").addEventListener("input", (e) => {
+          $("#pvDob").textContent = e.target.value || "— —";
+        });
+
+        function reset() {
+          steps.forEach((s) => s.classList.remove("active", "done"));
+          result.classList.add("hidden");
+          confWrap.classList.add("hidden");
+          actions.classList.add("hidden");
+          confBar.style.width = "0";
+          idCard.classList.remove("scanning");
+        }
+
+        $("#retryBtn").addEventListener("click", reset);
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const name = $("#vName").value.trim();
+          const nin = $("#vNin").value.replace(/\s+/g, "");
+          const dob = $("#vDob").value;
+          const digits = (nin.match(/\d/g) || []).length;
+
+          $("#vNinHint").style.display = digits >= 8 ? "none" : "block";
+          if (!name || !dob || digits < 8) {
+            return; // native required + hint handle the messaging
+          }
+
+          reset();
+          idCard.classList.add("scanning");
+
+          // Walk through the AI checks one at a time.
+          let i = 0;
+          const run = () => {
+            if (i > 0) steps[i - 1].classList.add("done");
+            if (i < steps.length) {
+              steps[i].classList.add("active");
+              i++;
+              setTimeout(run, 750);
+            } else {
+              finish(name, nin, dob);
+            }
+          };
+          setTimeout(run, 300);
+        });
+
+        function finish(name, nin, dob) {
+          idCard.classList.remove("scanning");
+          // Simple deterministic "confidence": high when fields look complete.
+          const confidence = Math.min(
+            99,
+            88 + ((nin.length + name.length) % 11),
+          );
+          result.classList.remove("hidden", "fail");
+          result.classList.add("pass");
+          result.innerHTML =
+            "✅ Identity verified — <b>" +
+            name +
+            "</b>. Match confidence " +
+            confidence +
+            "%. Your account is now activated.";
+          confWrap.classList.remove("hidden");
+          requestAnimationFrame(() => (confBar.style.width = confidence + "%"));
+          actions.classList.remove("hidden");
+          localStorage.setItem("idVerified", "1");
+        }
+      })();
+    </script>
+  </body>
+</html>

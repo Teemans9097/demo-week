@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <meta
+      name="description"
+      content="P.C  Quality Education Platform for Sierra Leone -  quality education platform for Sierra Leone"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/logo.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader">
+      <div class="loader-inner">
+        <img src="images/logo.svg" alt="Loading" />
+        <span class="loader-bar"><i></i></span>
+        <p>Loading Quality Education…</p>
+      </div>
+    </div>
+    <div class="topbar">
+      <div class="wrap">
+        <span> Sierra Leone · Free Quality Education</span
+        ><span class="badge">P.C Platform</span>
+      </div>
+    </div>
+    <header class="header">
+      <div class="wrap nav">
+        <a class="brand" href="index.html"
+          ><img
+            src="images/logo.svg"
+            alt="P.C Quality Education Sierra Leone badge logo"
+          /><span
+            ><b>P.C  Quality Education</b
+            ><small>Quality Education Platform for Sierra Leone</small></span
+          ></a
+        >
+        <ul class="menu">
+          <li><a class="" href="index.html">Home</a></li>
+          <li><a class="" href="about.html">About</a></li>
+          <li><a class="" href="courses.html">Courses</a></li>
+          <li><a class="" href="schools.html">Schools</a></li>
+          <li><a class="" href="resources.html">Resources</a></li>
+          <li><a class="" href="ai-tutor.html">AI Tutor</a></li>
+          <li><a class="" href="scholarships.html">Scholarships</a></li>
+          <li><a class="" href="careers.html">Careers</a></li>
+          <li><a class="" href="teacher-portal.html">Teacher</a></li>
+          <li><a class="" href="student-dashboard.html">Student</a></li>
+          <li><a class="" href="parent-portal.html">Parent</a></li>
+          <li><a class="" href="admin.html">Admin</a></li>
+          <li><a class="" href="security.html">Security</a></li>
+          <li><a class="" href="contact.html">Contact</a></li>
+          <li><a class="" href="login.html">Login</a></li>
+          <li><a class="active" href="signup.html">Sign Up</a></li>
+        </ul>
+        <div class="actions">
+          <button class="icon theme" title="Dark or light mode">🌙</button
+          ><button class="icon hamb">☰</button>
+        </div>
+      </div>
+    </header>
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="crumb"><a href="index.html">Home</a> / Sign Up</div>
+        <h1 class="h1">Sign Up</h1>
+        <p class="lead">
+          Create a free P.C Quality Education Platform for Sierra Leone
+          account.
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap" style="max-width: 760px">
+        <div class="panel">
+          <form id="signupFormV2">
+            <div class="grid cols-2">
+              <div class="field">
+                <label>Full name</label><input id="suName" required />
+              </div>
+              <div class="field">
+                <label>Email</label><input type="email" required />
+              </div>
+              <div class="field"><label>Phone</label><input required /></div>
+              <div class="field">
+                <label>District</label
+                ><select required>
+                  <option value="">Select district</option>
+                  <option>Western Area</option>
+                  <option>Bo</option>
+                  <option>Kenema</option>
+                  <option>Bombali</option>
+                  <option>Kono</option>
+                  <option>Port Loko</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Class / Role</label
+                ><select id="suRole" required>
+                  <option value="">Select</option>
+                  <option>Primary</option>
+                  <option>JSS</option>
+                  <option>SSS</option>
+                  <option>Teacher</option>
+                  <option>Parent</option>
+                </select>
+              </div>
+              <div class="field"><label>School</label><input required /></div>
+              <div class="field">
+                <label>National ID Number (NIN)</label
+                ><input
+                  id="suNin"
+                  inputmode="numeric"
+                  placeholder="For AI identity check"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label>Password</label
+                ><input id="suPass" type="password" required /><small
+                  id="strength"
+                ></small>
+              </div>
+              <div class="field">
+                <label>Confirm Password</label
+                ><input id="suConfirm" type="password" required />
+              </div>
+            </div>
+            <button class="btn primary">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="wrap foot">
+        <div>
+          <a class="brand" href="index.html"
+            ><img src="images/logo.svg" alt="badge" /><span
+              ><b>P.C Quality Education</b
+              ><small>Sierra Leone</small></span
+            ></a
+          >
+          <p>
+            Free, inclusive, secure and mobile-friendly education support for
+            learners, teachers and parents in Sierra Leone.
+          </p>
+        </div>
+        <div>
+          <h3>Platform</h3>
+          <a href="courses.html">Courses</a><a href="resources.html">Library</a
+          ><a href="schools.html">School Locator</a
+          ><a href="ai-tutor.html">AI Tutor</a>
+        </div>
+        <div>
+          <h3>Portals</h3>
+          <a href="student-dashboard.html">Student</a
+          ><a href="teacher-portal.html">Teacher</a
+          ><a href="parent-portal.html">Parent</a><a href="admin.html">Admin</a>
+        </div>
+        <div>
+          <h3>Updates</h3>
+          <form id="newsletter">
+            <input type="email" placeholder="Email address" /><button
+              class="btn gold"
+              style="margin-top: 0.6rem"
+            >
+              Join
+            </button>
+          </form>
+          <small id="nlmsg"></small>
+        </div>
+      </div>
+      <div class="wrap bottom">
+        <span
+          >© <span id="year"></span> P.C Quality Education Platform for
+          Sierra Leone</span
+        ><span>FREE LEARNING FOR ALL</span>
+      </div>
+    </footer>
+    <button class="back">↑</button>
+    <script src="js/main.js"></script>
+    <script src="js/sqlite-backend.js"></script>
+    <script>
+      // Account creation -> AI National ID verification (client-side demo)
+      (function () {
+        const $ = (s) => document.querySelector(s);
+        const form = document.getElementById("signupFormV2");
+        if (!form) return;
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          let ok = true;
+          form.querySelectorAll("input, select").forEach((x) => {
+            if (!x.value) {
+              ok = false;
+              x.style.borderColor = "#dc2626";
+            } else x.style.borderColor = "var(--line)";
+          });
+          const pass = $("#suPass"),
+            conf = $("#suConfirm");
+          if (pass && conf && pass.value !== conf.value) {
+            ok = false;
+            conf.style.borderColor = "#dc2626";
+            if ($("#strength"))
+              $("#strength").textContent = "Passwords do not match";
+          }
+          if (!ok) return;
+
+          const roleRaw = ($("#suRole") && $("#suRole").value) || "";
+          const role =
+            roleRaw === "Teacher"
+              ? "Teacher"
+              : roleRaw === "Parent"
+                ? "Parent"
+                : "Student";
+          localStorage.setItem("pcRole", role);
+          localStorage.setItem(
+            "pcUser",
+            ($("#suName") && $("#suName").value) || "Student",
+          );
+          // Give each learner a code their parent can use to link accounts.
+          if (role === "Student") {
+            localStorage.setItem(
+              "childCode",
+              "SLE-" + Math.floor(1000 + Math.random() * 9000),
+            );
+          }
+          location.href = "verify-id.html";
+        });
+      })();
+    </script>
+  </body>
+</html>
